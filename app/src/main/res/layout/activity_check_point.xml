@@ -1,16 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".checkPointActivity">
+   <fragment
+       android:id="@+id/mapFrag"
+       android:name="com.google.android.gms.maps.MapFragment"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1"
+       />
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <EditText
-        android:layout_width="match_parent"
+        android:id="@+id/EditTxtSource"
+        android:layout_width="200dp"
+        android:text="latitude"
         android:layout_height="wrap_content"
-        android:text="HELLO WORLD"
-        android:textAlignment="center"
-        android:background="@color/colorPrimaryDark"
         />
+    <EditText
+        android:id="@+id/EditTxtSource2"
+        android:layout_width="200dp"
+        android:text="longitude"
+        android:layout_height="wrap_content"
+        tools:ignore="DuplicateIds" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/EditTxtDest"
+            android:layout_width="200dp"
+            android:text="latitude"
+            android:layout_height="wrap_content"
+            />
+        <EditText
+            android:id="@+id/EditTxtDest2"
+            android:layout_width="200dp"
+            android:text="longitude"
+            android:layout_height="wrap_content"
+            tools:ignore="DuplicateIds" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnGetDirections"
+        android:text="Get Directions"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-</RelativeLayout>
+</LinearLayout>
